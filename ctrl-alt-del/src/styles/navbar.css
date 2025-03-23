@@ -1,26 +1,25 @@
-.navbar {
+.brand-container {
     display: flex;
-    justify-content: flex-end; /* Aligns links to the right */
-    align-items: center;
-    padding: 15px 50px; /* Increased padding for spacing */
-    background: #fefcf3;
+    align-items: center; 
   }
   
-  .nav-links {
-    list-style: none;
+  .logo-wrapper {
     display: flex;
-    gap: 40px; /* Increased gap for better spacing */
-    padding: 0;
+    flex-direction: column; /* Stack logo above text */
+    align-items: center; /* Center the logo with text */
+    text-align: center; /* Ensure text stays centered under the logo */
   }
   
-  .nav-links li {
-    display: inline;
+  .app-logo {
+    height: 80px; /* Adjust size as needed */
+    width: auto;
+    border-radius: 8px; /* Optional for smooth edges */
   }
   
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
+  .app-name {
+    font-size: 1.2rem;
     font-weight: bold;
-    font-size: 18px;
+    color: #3085d3; /* Adjust as needed */
+    margin-top: 3px; /* Space between logo and text */
   }
   

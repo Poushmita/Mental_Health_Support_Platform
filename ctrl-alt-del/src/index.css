@@ -2,16 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+/* body{
   background-color: rgb(7, 30, 63);
   color: aliceblue;
-}
-
-h1{
-  margin: 1rem;
-  font-size: large;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+} */
 
 p{
   margin: 1rem;;

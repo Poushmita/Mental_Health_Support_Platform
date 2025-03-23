@@ -5,5 +5,5 @@
     width: 100%;
     padding-bottom: 56.25%; /* 16:9 Aspect Ratio (height = 9/16 * width) */
     color: black; /* Adjust text color for better visibility */
-    opacity:0.7;
+    /* opacity:0.7; */
 }

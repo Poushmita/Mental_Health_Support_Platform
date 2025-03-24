@@ -21,8 +21,8 @@ export default function Home() {
           <div>
               <h1 className="m-2">section2</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ullam perferendis, quaerat quasi quos expedita!</p>
-              <button class="btn btn-success">Bootstrap Button</button>
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <button className="btn btn-success">Bootstrap Button</button>
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 Click Me
               </button>
 

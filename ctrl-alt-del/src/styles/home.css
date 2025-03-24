@@ -7,3 +7,6 @@
     color: black; /* Adjust text color for better visibility */
     /* opacity:0.7; */
 }
+button{
+    margin: 1rem;
+}

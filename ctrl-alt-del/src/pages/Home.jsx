@@ -1,4 +1,6 @@
 import home1 from '../assets/home1.jpg';
+import '../styles/home.css'
+import Footer from '../components/Footer';
 import Navbar from "../components/Navbar";
 
 export default function Home() {
@@ -27,6 +29,8 @@ export default function Home() {
           </div>
         </section>
 
+
+        <Footer />
       </>
     )
   }

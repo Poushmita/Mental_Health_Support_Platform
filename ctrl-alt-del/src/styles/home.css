@@ -1,5 +1,5 @@
 .sec1 {
-    height: 100vh; /* Full viewport height */
+    height: 50vh; /* Full viewport height */
     width: 100%; /* Full width of the section */
     position: relative;
     width: 100%;
@@ -7,6 +7,4 @@
     color: black; /* Adjust text color for better visibility */
     /* opacity:0.7; */
 }
-button{
-    margin: 1rem;
-}
+

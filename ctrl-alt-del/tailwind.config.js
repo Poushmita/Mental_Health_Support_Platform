@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        lora: ["Lora", "serif"],
+        pacifico: ["Pacifico", "cursive"],
+        raleway: ["Raleway", "sans-serif"],
+        oswald: ["Oswald", "sans-serif"],
+        nunito: ["Nunito", "sans-serif"]
+      },
+    },
   },
   plugins: [],
 }

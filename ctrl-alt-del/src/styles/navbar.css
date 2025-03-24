@@ -11,7 +11,7 @@
   }
   
   .app-logo {
-    height: 80px; 
+    height: 40px; 
     width: auto;
     border-radius: 8px; 
   }
@@ -22,4 +22,5 @@
     color: #3085d3; 
     margin-top: 3px; 
   }
+
   

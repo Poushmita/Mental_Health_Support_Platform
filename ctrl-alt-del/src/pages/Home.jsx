@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-import React from "react";
-import slide1 from "../assets/slide1.png";
-import slide2 from "../assets/slide2.png";  
-import slide3 from "../assets/slide3.png";  
-import slide4 from "../assets/slide4.png";
-import slide5 from "../assets/slide5.png";
-import slide6 from "../assets/slide6.png";
-=======
 import home1 from '../assets/home1.jpg';
 import '../styles/home.css'
 import Footer from '../components/Footer';
->>>>>>> 8b412f40dd46526075930a977c6581cd30f0fa53
 import Navbar from "../components/Navbar";
 
 export default function Home() {
@@ -18,17 +8,6 @@ export default function Home() {
     return ( 
       <>
         <Navbar />
-<<<<<<< HEAD
-        <section>
-          <div id="carouselExampleIndicators" className="carousel slide">
-          <div className="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-=======
         <section
           className="sec1 grid place-items-center bg-no-repeat bg-cover bg-center w-full min-h-screen"
           style={{backgroundImage: `url(${home1})`}}
@@ -47,7 +26,6 @@ export default function Home() {
                 Click Me
               </button>
 
->>>>>>> 8b412f40dd46526075930a977c6581cd30f0fa53
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
@@ -77,7 +55,6 @@ export default function Home() {
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
           </button>
-        </div>
         </section>
 
 

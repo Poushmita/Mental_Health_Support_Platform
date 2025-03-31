@@ -6,7 +6,6 @@ import slide3 from "../assets/slide3.png";
 import slide4 from "../assets/slide4.png";
 import slide5 from "../assets/slide5.png";
 import slide6 from "../assets/slide6.png";
-import home1 from '../assets/home1.jpg';
 import '../styles/home.css'
 import Footer from '../components/Footer';
 import Navbar from "../components/Navbar";

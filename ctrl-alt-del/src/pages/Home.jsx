@@ -1,6 +1,6 @@
 import React from 'react';
 import slide1 from "../assets/slide1.png";
-import slide2 from "../assets/slide2.jpg";
+import slide2 from "../assets/slide2.png";
 import slide3 from "../assets/slide3.png";
 import slide4 from "../assets/slide4.png";
 import slide5 from "../assets/slide5.png";
@@ -15,7 +15,7 @@ export default function Home() {
       <>
         <Navbar />
         <section className="sec1">
-            <div id="carouselExampleAutoplaying" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div id="carouselExampleAutoplaying" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-pause="false">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img src={slide1} class="d-block w-100" alt="Slide 1" />

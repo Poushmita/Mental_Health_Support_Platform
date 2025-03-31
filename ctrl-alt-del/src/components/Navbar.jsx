@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import logo from "../assets/logo3.jpg";
+import logo from "../assets/logo_up.jpg";
 import "../styles/navbar.css";
 
 const MentalHealthNavbar = () => {

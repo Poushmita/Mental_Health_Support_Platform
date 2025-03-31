@@ -16,13 +16,8 @@ export default function Home() {
     return ( 
       <>
         <Navbar />
-<<<<<<< HEAD
-         <section className="sec1">
-            <div id="carouselExampleAutoplaying" class="carousel carousel-dark slide" data-bs-ride="carousel">
-=======
         <section className="sec1">
             <div id="carouselExampleAutoplaying" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-pause="false">
->>>>>>> main
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img src={slide1} class="d-block w-100" alt="Slide 1" />

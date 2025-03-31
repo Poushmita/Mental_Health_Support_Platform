@@ -92,11 +92,7 @@ export default function Home() {
           </div>
         </section>
 
-<<<<<<< HEAD
-       <Footer />
-=======
         <Footer />
->>>>>>> 65913c9225f6916a91bfd9506a70c9cb6ace2de5
       </>
     );
 }

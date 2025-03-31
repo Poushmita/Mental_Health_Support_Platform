@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        atma: ['Atma', 'cursive'],
         poppins: ["Poppins", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         lora: ["Lora", "serif"],

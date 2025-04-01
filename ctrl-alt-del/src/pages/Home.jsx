@@ -7,7 +7,6 @@ import slide5 from "../assets/slide5.png";
 import slide6 from "../assets/slide6.png";
 import '../styles/home.css';
 import Footer from '../components/Footer';
-import Navbar from "../components/Navbar";
 import { FaBookOpen, FaUsers, FaPenFancy, FaComments } from "react-icons/fa";
 
 export default function Home() {
@@ -28,7 +27,7 @@ export default function Home() {
 
     return ( 
       <>
-        <Navbar />
+        
 
         {/* Section 1: Carousel */}
         <section className="sec1">

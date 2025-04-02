@@ -24,7 +24,7 @@ export default function About () {
           We are dedicated to creating a safe space for mental health awareness, self-care, and emotional support. Our mission
           is to provide evidence-based tools and resources for emotional well-being.
         </p>
-        <div className="ml-72 mt-6 text-left">
+        <div className="md:ml-72 mt-6 text-left">
           <h5 className="font-semibold flex items-center">
             <span className="mr-2">📌</span> What We Offer:
           </h5>

@@ -10,11 +10,12 @@ export default {
         atma: ['Atma', 'cursive'],
         poppins: ["Poppins", "sans-serif"],
         inter: ["Inter", "sans-serif"],
+        playfair: ['Playfair Display', 'serif'],
         lora: ["Lora", "serif"],
         pacifico: ["Pacifico", "cursive"],
         raleway: ["Raleway", "sans-serif"],
         oswald: ["Oswald", "sans-serif"],
-        nunito: ["Nunito", "sans-serif"]
+        nunito: ["Nunito", "sans-serif"],
       },
     },
   },

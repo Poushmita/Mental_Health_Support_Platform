@@ -19,7 +19,7 @@
 .sec2 {
     text-align: center;
     padding: 50px 20px;
-    background: linear-gradient(to bottom, #faf3e0, #fdfbf5); /* Smooth blend */
+    background: linear-gradient(to bottom, #fdfbf5, #faf3e0); /* Smooth blend */
     /* background: linear-gradient(to bottom, #fadbbd, #fbebdc);  */
 }
 
@@ -62,7 +62,7 @@
 .sec3 {
     text-align: center;
     padding: 50px 20px;
-    background-color: #fdfbf5;
+    background-color: #faf3e0;
     /* background-color: #fbebdc;  */
 }
 

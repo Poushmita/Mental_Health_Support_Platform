@@ -1,31 +1,43 @@
 import React from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import { Link } from "react-router-dom"; // Import Link from React Router
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo_up.jpg";
 import "../styles/navbar.css";
 
 const MentalHealthNavbar = () => {
+  const location = useLocation();
+
+  // Background colors for different pages
+  const pageBackgrounds = {
+    "/": "#fcfeed",
+    "/about": "#EDF6F9",
+    "/contact": "#F1DDD2",
+    "/mood-tracker": "#83C5BE ",
+    "/journal": "#FFF5E1",
+    "/blogs": "#FAF3E0",
+    "/analysis": "#EAE2B7",
+    "/rewards": "#F7CAC9",
+  };
+
+  const currentBgColor = pageBackgrounds[location.pathname] || "transparent";
+
   return (
-    <Navbar expand="lg" className="px-3 navbar" style={{ backgroundColor: '#84a160' }}>
+    <Navbar expand="lg" className="px-3 navbar" style={{ backgroundColor: currentBgColor }}>
       <Container>
-        {/* Logo */}
         <Navbar.Brand as={Link} to="/" className="brand-container">
           <div className="logo-wrapper">
             <img src={logo} alt="Logo" className="app-logo" />
           </div>
         </Navbar.Brand>
 
-        {/* Toggle Button */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto font-pacifico font-bold text-black">
-            {/* Main Links */}
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/about">About Us</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
             <Nav.Link as={Link} to="/login">Login / Signup</Nav.Link>
 
-            {/* Additional Links in Dropdown */}
             <NavDropdown title="More" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/journal">Write Your Journal 📝</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/blogs">Read Blogs 📰</NavDropdown.Item>

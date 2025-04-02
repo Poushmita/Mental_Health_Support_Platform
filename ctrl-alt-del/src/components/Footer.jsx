@@ -1,29 +1,41 @@
 import logo from "../assets/logo_down.webp";
 
-
 export default function Footer() {
-
   return (
-    <>
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3  border-top"  style={{backgroundColor: ' #fbebdc'}}>
-            <div class="col-md-4 d-flex align-items-center">
-                <span class="mb-3 mb-md-0 text-muted">© 2024 Company, Inc</span>
-            </div>
+    <footer className="container-fluid py-5 border-top" style={{ backgroundColor: '#f8f9fa' }}>
+      <div className="row px-5">
+        {/* Left Side - Logo & Copyright */}
+        <div className="col-md-3 d-flex flex-column align-items-start">
+          <img src={logo} alt="Logo" width="50" height="40" className="mb-3" />
+          <span className="text-muted fs-6">© 2024 Company, Inc</span>
+        </div>
 
-            <a href="/" className="d-flex align-items-center justify-content-center">
-                <img src={logo} alt="Logo" width="40" height="32" />
-            </a>
+        {/* Center - Navigation Links with Increased Spacing */}
+        <div className="col-md-6 d-flex justify-content-center">
+          <div className="row w-100 text-center">
+            {["Section", "Section", "Section"].map((section, index) => (
+              <div key={index} className="col-4">
+                <h6 className="fw-bold mb-3">{section}</h6>
+                <ul className="list-unstyled">
+                  <li className="mb-2"><a href="#" className="text-muted text-decoration-none">Home</a></li>
+                  <li className="mb-2"><a href="#" className="text-muted text-decoration-none">About Us</a></li>
+                  <li className="mb-2"><a href="#" className="text-muted text-decoration-none">Contact</a></li>
+                  <li className="mb-2"><a href="#" className="text-muted text-decoration-none">FAQs</a></li>
+                  <li><a href="#" className="text-muted text-decoration-none">More</a></li>
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
 
-            <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact Us</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About Us</a></li>
-            </ul>
-        </footer>
-
-    </>
-  )
+        {/* Right Side - Social Media Icons with Spacing */}
+        <div className="col-md-3 d-flex align-items-center justify-content-end">
+          <a href="#" className="me-4 text-muted"><i className="bi bi-twitter fs-3"></i></a>
+          <a href="#" className="me-4 text-muted"><i className="bi bi-facebook fs-3"></i></a>
+          <a href="#" className="me-4 text-muted"><i className="bi bi-instagram fs-3"></i></a>
+          <a href="#" className="text-muted"><i className="bi bi-linkedin fs-3"></i></a>
+        </div>
+      </div>
+    </footer>
+  );
 }
-

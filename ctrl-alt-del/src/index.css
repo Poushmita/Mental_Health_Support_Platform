@@ -5,6 +5,13 @@
 @tailwind utilities;
 
 
+/* body {
+  transition: background-color 0.1s ease-in-out;
+} */
+
+body {
+  transition: none !important; /* Remove smooth transition */
+}
 
 
 

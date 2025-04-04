@@ -3,9 +3,9 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="container mx-auto p-5">
+    <div className="w-full mx-auto p-8">
       {/* Header Section */}
-      <div className="bg-[#F1DDD2] p-5 text-center rounded-lg">
+      <div className="bg-[#F1DDD2] p-2 text-center rounded-lg">
         <img
           src="src/assets/banner_new.png"
           alt="Contact Us Banner"
@@ -33,31 +33,31 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
-      <div className="bg-[#F1DDD2] p-5 mt-5  rounded-lg flex flex-col md:flex-row items-center gap-5">
+      <div className="bg-[#F1DDD2] p-2 mt-2  rounded-lg flex flex-col md:flex-row items-center gap-5">
         <form className="w-full">
           <h2 className="text-2xl font-bold text-[#5C4033] text-center mb-3">Send Us a Message</h2>
           <input
             type="text"
             placeholder="Your Name"
-            className="w-full p-2 border-2 border-[#83C5BE] rounded-md mb-3"
+            className="w-full p-2 border-2 border-[#83C5BE] rounded-md mb-4"
             required
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="w-full p-2 border-2 border-[#83C5BE] rounded-md mb-3"
+            className="w-full p-2 border-2 border-[#83C5BE] rounded-md mb-4"
             required
           />
           <input
             type="text"
             placeholder="Subject"
-            className="w-full p-2 border-2 border-[#83C5BE] rounded-md mb-3"
+            className="w-full p-2 border-2 border-[#83C5BE] rounded-md mb-4"
             required
           />
           <textarea
             rows="4"
             placeholder="Your Message"
-            className="w-full p-2 border-2 border-[#83C5BE] rounded-md mb-3"
+            className="w-full p-2 border-2 border-[#83C5BE] rounded-md mb-4"
             required
           ></textarea>
           <button type="submit" className="bg-[#006D77] text-white px-4 py-2 rounded-md w-full">

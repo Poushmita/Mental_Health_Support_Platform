@@ -9,8 +9,13 @@ export default function About () {
     // <div className="bg-beige-100 text-gray-900 p-8">
     <div className="bg-[#EDF6F9] text-[#5C4033] p-8">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold">About Us</h1>
-        <p className="text-lg text-teal-700  font-semibold mt-2">Helping You Prioritize Mental Well-being</p>
+      <img
+          src="src/assets/about_banner.png"
+          alt="Contact Us Banner"
+          className="w-full h-auto max-w-[1600px] max-h-[400px] object-cover rounded-lg"
+        />
+        {/*<h1 className="text-4xl font-bold">About Us</h1>
+        <p className="text-lg text-teal-700  font-semibold mt-2">Helping You Prioritize Mental Well-being</p>*/}
         <button className="mt-4 px-6 py-2 bg-rose-400 text-white rounded-full shadow-lg hover:bg-rose-500">
           Meet Our Team
         </button>

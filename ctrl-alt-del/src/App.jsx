@@ -6,18 +6,32 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 import MoodTracker from './pages/Mood_Tracker';
 import Journal from './pages/Journal';
 import Blogs from './pages/Blogs';
 import Analysis from './pages/Analysis';
 import Rewards from './pages/Rewards';
-import { useLayoutEffect } from 'react';
+import { useLayoutEffect, useEffect } from 'react';
 import Footer from './components/Footer';
+import axios from 'axios'; // 💡 add this line
 
 function AppContent() {
   const location = useLocation();
 
-  // Page-specific background colors
+  // 🔗 ping Django backend on first load
+  useEffect(() => {
+    axios.get("http://localhost:8000/api/test/")
+      .then((response) => {
+        console.log("💌 Backend says:", response.data.message);
+      })
+      .catch((error) => {
+        console.error("❌ Error connecting to backend:", error);
+      });
+  }, []);
+
+  // 🎨 Page-specific background colors
   const pageBackgrounds = {
     "/": "#ffffff",
     "/about": "#EDF6F9",
@@ -45,6 +59,8 @@ function AppContent() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/analysis" element={<Analysis />} />
         <Route path="/rewards" element={<Rewards />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
       <Footer />
     </>
@@ -60,5 +76,3 @@ function App() {
 }
 
 export default App;
-
-

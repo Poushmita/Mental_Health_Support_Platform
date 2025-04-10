@@ -33,7 +33,9 @@ function AppContent() {
 
   // 🎨 Page-specific background colors
   const pageBackgrounds = {
-    "/": "#ffffff",
+    "/": "#fcfeed",
+    "/login": "linear-gradient(to right, #F1DDD2, #EDF6F9)", 
+    "/signup": "linear-gradient(to right, #F1DDD2, #EDF6F9)", 
     "/about": "#EDF6F9",
     "/contact": "#F1DDD2",
     "/mood-tracker": "#83C5BE ",
@@ -44,7 +46,15 @@ function AppContent() {
   };
 
   useLayoutEffect(() => {
-    document.body.style.backgroundColor = pageBackgrounds[location.pathname] || "white";
+    const bg = pageBackgrounds[location.pathname];
+    if (bg?.startsWith("linear-gradient")) {
+      document.body.style.backgroundImage = bg;
+      document.body.style.backgroundColor = ""; // remove solid color if any
+    } else {
+      document.body.style.backgroundColor = bg || "white";
+      document.body.style.backgroundImage = "";
+    }
+
   }, [location]);
 
   return (

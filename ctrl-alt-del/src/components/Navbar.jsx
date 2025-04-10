@@ -10,6 +10,7 @@ const MentalHealthNavbar = () => {
   // Background colors for different pages
   const pageBackgrounds = {
     "/": "#fcfeed",
+    "/signup": "linear-gradient(to right, #F1DDD2, #EDF6F9)", 
     "/about": "#EDF6F9",
     "/contact": "#F1DDD2",
     "/mood-tracker": "#83C5BE ",

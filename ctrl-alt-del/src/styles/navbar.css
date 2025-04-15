@@ -1,0 +1,26 @@
+.brand-container {
+    display: flex;
+    align-items: center; 
+  }
+  
+  .logo-wrapper {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+  }
+  
+  .app-logo {
+    height: 40px; 
+    width: auto;
+    border-radius: 8px; 
+  }
+  
+  /* .app-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3085d3; 
+    margin-top: 3px; 
+  } */
+
+  

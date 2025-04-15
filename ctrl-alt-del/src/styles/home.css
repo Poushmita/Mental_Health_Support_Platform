@@ -1,9 +1,101 @@
+
 .sec1 {
-    height: 100vh; /* Full viewport height */
-    width: 100%; /* Full width of the section */
-    position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (height = 9/16 * width) */
-    color: black; /* Adjust text color for better visibility */
-    opacity:0.7;
+    height: 80vh;  /* Adjust height to ensure images fit well */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7ebcb;
+    /* background-color: #Fadbbd;  Your beige background */
+    overflow: hidden;  /* Prevent scrolling */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures images fill the area without stretching */
+}
+
+/* Section 2: Story & CTA */
+.sec2 {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #fdfbf5, #faf3e0); /* Smooth blend */
+    /* background: linear-gradient(to bottom, #fadbbd, #fbebdc);  */
+}
+
+.sec2{
+    p span{
+        color: #5C4033;
+    }
+}
+
+/* 
+.story-container h2 {
+    font-size: 2rem;
+    color: #5a4d4d;
+} */
+
+.story-container p {
+    font-size: 1.6rem;
+    color: #333;
+    max-width: 800px;
+    margin: 8px auto;
+}
+
+.cta-button {
+    background-color: #6a89cc;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #4a69bd;
+}
+
+/* Section 3: Features */
+.sec3 {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #faf3e0;
+    /* background-color: #fbebdc;  */
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.feature {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 40px;
+    color: #6a89cc;
+}
+
+.feature h3 {
+    margin-top: 15px;
+    color: #333;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
 }

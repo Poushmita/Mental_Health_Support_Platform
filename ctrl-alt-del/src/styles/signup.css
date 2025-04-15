@@ -1,0 +1,10 @@
+/* Signup.css (will be very similar, adjust colors and specific elements) */
+.signup-container {
+  /* ... similar styles as .login-container ... */
+}
+
+.signup-left, .signup-right {
+  /* ... similar styles as .login-left and .login-right ... */
+}
+
+/* ... other signup-specific styles ... */

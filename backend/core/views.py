@@ -21,5 +21,5 @@ def test_connection(request):
     return JsonResponse({"message": "Connected to backend and DB successfully!"})
 
 def home(request):
-    return HttpResponse("🎉 Hello! This is the Django backend root. Try /admin or /api/signup.")
+    return HttpResponse("🎉 Hello! This is the Django backend root. Try /admin or /api/signup/")
 

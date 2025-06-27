@@ -4,6 +4,13 @@ from django.http import JsonResponse, HttpResponse
 from django.contrib.auth.models import User
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework import viewsets
+from .models import MoodEntry
+from .serializers import MoodEntrySerializer
+
+class MoodEntryViewSet(viewsets.ModelViewSet):
+    queryset = MoodEntry.objects.all()
+    serializer_class = MoodEntrySerializer
 
 @api_view(['POST'])
 def signup_view(request):
@@ -22,4 +29,8 @@ def test_connection(request):
 
 def home(request):
     return HttpResponse("🎉 Hello! This is the Django backend root. Try /admin or /api/signup/")
+
+
+
+
 

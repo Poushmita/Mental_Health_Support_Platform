@@ -1,53 +1,56 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-const Signup = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [animation, setAnimation] = useState("");
+export default function Signup() {
+  const [formData, setFormData] = useState({ username: '', email: '', password: '' });
+  const [error, setError] = useState('');
+  const [animation, setAnimation] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Only apply animation if we came from login
-    const panelAction = sessionStorage.getItem("panelAction");
-    if (panelAction === "login") {
-      setAnimation("animate-slide-left");
-      sessionStorage.removeItem("panelAction");
+    const panelAction = sessionStorage.getItem('panelAction');
+    if (panelAction === 'login') {
+      setAnimation('animate-slide-left');
+      sessionStorage.removeItem('panelAction');
     }
   }, []);
 
-  const handleLoginClick = () => {
-    // Slide right before navigating
-    setAnimation("animate-slide-right");
-    sessionStorage.setItem("panelAction", "signup");
-
-    setTimeout(() => {
-      navigate("/login");
-    }, 700); // Match animation duration (0.7s)
-    sessionStorage.removeItem("panelAction");
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSignup = async (e) => {
+  const handleLoginClick = () => {
+    setAnimation('animate-slide-right');
+    sessionStorage.setItem('panelAction', 'signup');
+    setTimeout(() => {
+      navigate('/login');
+    }, 700);
+    sessionStorage.removeItem('panelAction');
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
+    setError('');
 
     try {
-      const response = await axios.post("/api/signup/", { name, email, password });
-      console.log("Signup success:", response.data);
+      const res = await axios.post('http://localhost:8000/api/signup/', formData);
+      alert('Signup successful!');
+      console.log(res.data);
+      navigate('/login');
     } catch (err) {
-      setError("Signup failed. Please try again.");
+      console.error(err);
+      setError('Signup failed! Please try again.');
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center"
+    <div
+      className="min-h-screen flex items-center justify-center"
       style={{ backgroundImage: 'linear-gradient(to right, #F1DDD2, #EDF6F9)' }}
     >
       <div className="flex w-[900px] rounded-lg shadow-2xl overflow-hidden transition-all duration-500">
-        {/* Green Panel */}
+        {/* Left Panel */}
         <div
           className={`w-1/2 text-white p-10 flex flex-col justify-center items-center text-center ${animation}`}
           style={{ backgroundImage: 'linear-gradient(to right, #2f655f, #387770, #408981, #499b93)' }}
@@ -68,30 +71,33 @@ const Signup = () => {
 
           {error && <div className="text-red-500 text-sm text-center mb-4">{error}</div>}
 
-          <form onSubmit={handleSignup}>
+          <form onSubmit={handleSubmit}>
             <input
+              name="username"
               type="text"
-              placeholder="Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
+              placeholder="Username"
+              value={formData.username}
+              onChange={handleChange}
               className="w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
+              required
             />
             <input
+              name="email"
               type="email"
               placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
+              value={formData.email}
+              onChange={handleChange}
               className="w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
+              required
             />
             <input
+              name="password"
               type="password"
               placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
+              value={formData.password}
+              onChange={handleChange}
               className="w-full mb-6 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
+              required
             />
             <button
               type="submit"
@@ -107,7 +113,5 @@ const Signup = () => {
       </div>
     </div>
   );
-};
-
-export default Signup;
+}
 
